@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+            <TextView
+            android:padding="5dp"
+            android:text="@string/top_current_movies"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            </TextView>
+            <ImageButton
+                android:id="@+id/ib_prev"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_round_navigate_before_24"
+                app:tint="#C6C6C6"
+                />
+            <TextView
+                android:id="@+id/tv_page"
+                android:layout_marginTop="7dp"
+                android:paddingHorizontal="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="1"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D5CDCD">
+            </TextView>
+            <ImageButton
+                android:id="@+id/ib_next"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_round_navigate_next_24"
+                app:tint="#C3C2C2"
+                />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_TopCurrentMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

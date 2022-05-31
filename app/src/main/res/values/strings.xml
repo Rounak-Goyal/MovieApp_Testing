@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MovieApplication</string>
+    <string name="top_current_movies">Top Current Movies</string>
+</resources>
