@@ -2,26 +2,22 @@ package com.example.movieapplication.ui;
 
 import static com.example.movieapplication.api.Service.IMAGE_BASE_URL_1280;
 import static com.example.movieapplication.api.Service.IMAGE_BASE_URL_500;
-
 import com.example.movieapplication.R;
 import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
 
-import java.util.List;
-
 public class MovieDetailActivity extends AppCompatActivity {
-
     String title;
     int id;
     ImageView ivHorizontalPoster, ivVerticalPoster;
     TextView tvTitle, tvPopularity, tvReleaseDate, tvOverview,tvViews,tvRating,tvLanguage;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

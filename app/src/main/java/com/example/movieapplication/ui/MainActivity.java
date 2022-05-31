@@ -1,20 +1,18 @@
 package com.example.movieapplication.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.movieapplication.BuildConfig;
 import com.example.movieapplication.R;
 import com.example.movieapplication.adapter.MovieAdapter;
 import com.example.movieapplication.api.Client;
@@ -22,13 +20,14 @@ import com.example.movieapplication.api.Service;
 import com.example.movieapplication.model.ResponseNowPlaying;
 import com.example.movieapplication.model.Movie;
 
+
 import java.util.ArrayList;
 import java.util.List;
-import static com.example.movieapplication.api.Service.TMDb_API_KEY;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -69,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         nowPlayingMovieAdapter.notifyDataSetChanged();
 
         ib_prev.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if(page<=1) page = 1;
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         ib_next.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if(page>=total_pages) page = total_pages;
@@ -93,15 +94,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadJSON() {
         try {
-            if(TMDb_API_KEY.isEmpty()){
-                Toast.makeText(getApplicationContext(),"Invalid Api key",Toast.LENGTH_SHORT).show();
-            }
+            String API_KEY = BuildConfig.API_KEY;
             Client Client = new Client();
             Service apiService = Client.getClient().create(Service.class);
-            Call<ResponseNowPlaying> call = apiService.getNowPlaying(TMDb_API_KEY,page);
+            Call<ResponseNowPlaying> call = apiService.getNowPlaying(API_KEY,page);
             call.enqueue(new Callback<ResponseNowPlaying>() {
                 @Override
-                public void onResponse(Call<ResponseNowPlaying> call, Response<ResponseNowPlaying> response) {
+                public void onResponse(@NonNull Call<ResponseNowPlaying> call, @NonNull Response<ResponseNowPlaying> response) {
                     List<Movie> movies = response.body().getResults();
                     page = response.body().getPage();
                     total_pages = response.body().getTotal_pages();
@@ -111,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<ResponseNowPlaying> call, Throwable t) {
+                public void onFailure(@NonNull Call<ResponseNowPlaying> call, @NonNull Throwable t) {
                     Log.d("Error",t.getMessage());
                     Toast.makeText(getApplicationContext(),"Error in fetching results!!",Toast.LENGTH_SHORT).show();
                 }
