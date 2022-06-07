@@ -9,7 +9,9 @@
         <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/layout/activity_main.xml" value="0.2453125" />
         <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/layout/activity_movie_detail.xml" value="0.259375" />
         <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/layout/activity_splash.xml" value="0.259375" />
+        <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/layout/row_cast.xml" value="0.25833333333333336" />
         <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/layout/row_nowplaying_movie.xml" value="0.6" />
+        <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/layout/row_recommend_movie.xml" value="0.25833333333333336" />
         <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.127" />
         <entry key="..\:/wAndroid Development/MovieApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1555" />
       </map>

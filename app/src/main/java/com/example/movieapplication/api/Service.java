@@ -1,8 +1,10 @@
 package com.example.movieapplication.api;
 
+import com.example.movieapplication.model.ResponseCreditDetail;
 import com.example.movieapplication.model.ResponseNowPlaying;
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 
@@ -14,6 +16,23 @@ public interface Service {
     Call<ResponseNowPlaying> getNowPlaying(
             @Query("api_key") String api_key,
             @Query("page") int page
+    );
+    @GET("movie/popular")
+    Call<ResponseNowPlaying> getPopularMovie(
+            @Query("api_key") String api_key,
+            @Query("page") int page
+    );
+
+    @GET("movie/" + "{movie_id}/credits")
+    Call<ResponseCreditDetail> getCreditDetail(
+            @Path("movie_id") int movie_id,
+            @Query("api_key") String api_key
+    );
+
+    @GET("movie/" + "{movie_id}/recommendations")
+    Call<ResponseNowPlaying> getRecommendDetail(
+            @Path("movie_id") int movie_id,
+            @Query("api_key") String api_key
     );
 }
 
