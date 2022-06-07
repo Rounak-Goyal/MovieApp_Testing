@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
             call_popular.enqueue(new Callback<ResponseNowPlaying>() {
                 @Override
                 public void onResponse(@NonNull Call<ResponseNowPlaying> call, @NonNull Response<ResponseNowPlaying> response) {
+                    assert response.body() != null;
                     List<Movie> movies = response.body().getResults();
 
                     rvPopularMovie.setAdapter(new MovieAdapter(movies, getApplicationContext()));

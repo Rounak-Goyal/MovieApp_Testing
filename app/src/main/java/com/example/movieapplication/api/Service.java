@@ -1,5 +1,6 @@
 package com.example.movieapplication.api;
 
+import com.example.movieapplication.model.ResponseClip;
 import com.example.movieapplication.model.ResponseCreditDetail;
 import com.example.movieapplication.model.ResponseNowPlaying;
 import retrofit2.Call;
@@ -31,6 +32,11 @@ public interface Service {
 
     @GET("movie/" + "{movie_id}/recommendations")
     Call<ResponseNowPlaying> getRecommendDetail(
+            @Path("movie_id") int movie_id,
+            @Query("api_key") String api_key
+    );
+    @GET("movie/" + "{movie_id}/videos")
+    Call<ResponseClip> getClips(
             @Path("movie_id") int movie_id,
             @Query("api_key") String api_key
     );

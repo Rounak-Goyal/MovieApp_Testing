@@ -29,8 +29,14 @@ import com.example.movieapplication.api.Client;
 import com.example.movieapplication.api.Service;
 import com.example.movieapplication.model.Cast;
 import com.example.movieapplication.model.Movie;
+import com.example.movieapplication.model.ResponseClip;
 import com.example.movieapplication.model.ResponseCreditDetail;
 import com.example.movieapplication.model.ResponseNowPlaying;
+import com.example.movieapplication.model.Video;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
+import com.google.android.youtube.player.YouTubePlayerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -46,6 +52,8 @@ public class MovieDetailActivity extends AppCompatActivity {
     ImageView ivHorizontalPoster, ivVerticalPoster;
     TextView tvTitle, tvPopularity, tvReleaseDate, tvOverview,tvViews,tvRating,tvLanguage;
     VideoView v;
+    static String key = "qDd3eAuFZjM";
+    private YouTubePlayer mYoutubeView;
 
     public RecyclerView rvCast, rvRecommendContents;
     public RecyclerView.Adapter castAdapter, recommendAdapter;
@@ -104,14 +112,30 @@ public class MovieDetailActivity extends AppCompatActivity {
         recommendAdapter.notifyDataSetChanged();
         castAdapter.notifyDataSetChanged();
 
-
-
+        YouTubePlayerFragment youtubeFragment = (YouTubePlayerFragment)getFragmentManager().findFragmentById(R.id.youtubeFragment);
+        youtubeFragment.initialize(BuildConfig.YOUTUBE_API_KEY, new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider,YouTubePlayer youTubePlayer, boolean b) {
+                // do any work here to cue video, play video, etc.
+                youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+                youTubePlayer.cueVideo(key);
+                mYoutubeView = youTubePlayer;
+                //Toast.makeText(getApplicationContext(),"Play video!!"+ key,Toast.LENGTH_LONG).show();
+            }
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider,
+                                                YouTubeInitializationResult youTubeInitializationResult) {
+                Toast.makeText(getApplicationContext(),"Unable to Play video!!",Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
+
 
     public void loadJSON() {
         try {
             String API_KEY = BuildConfig.API_KEY;
+
             Client Client = new Client();
             Service apiService = Client.getClient().create(Service.class);
             Call<ResponseCreditDetail> call_cast = apiService.getCreditDetail(id,API_KEY);
@@ -149,13 +173,31 @@ public class MovieDetailActivity extends AppCompatActivity {
                 }
             });
 
+            Call<ResponseClip> call_video = apiService.getClips(id,API_KEY);
+            call_video.enqueue(new Callback<ResponseClip>() {
+                @Override
+                public void onResponse(@NonNull Call<ResponseClip> call, @NonNull Response<ResponseClip> response) {
+                    assert response.body() != null;
+                    List<Video> video = response.body().getVideo();
+                    key = video.get(0).getKey();
+                    Toast.makeText(getApplicationContext(),"fetching results!!  "+key,Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onFailure(@NonNull Call<ResponseClip> call, @NonNull Throwable t) {
+                    Log.d("Error",t.getMessage());
+                    Toast.makeText(getApplicationContext(),"Error in fetching results!!",Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+
+
         }catch (Exception e){
             Log.d("Error",e.getMessage());
             Toast.makeText(this,e.toString(),Toast.LENGTH_SHORT).show();
         }
-
-
-
 
     }
 

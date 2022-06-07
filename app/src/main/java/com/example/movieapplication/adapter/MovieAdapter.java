@@ -71,7 +71,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.PopularMovie
                     intent.putExtra("release_date", selectedMovie.getRelease_date());
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
-                    Toast.makeText(context,"Detailed Description of "+selectedMovie.getTitle(), Toast.LENGTH_SHORT).show();
                 }
             });
         }

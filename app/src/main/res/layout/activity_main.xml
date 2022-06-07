@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_round_navigate_before_24"
-                    app:tint="#C6C6C6"
+                    app:tint="#919090"
                     />
                 <TextView
                     android:id="@+id/tv_page"
@@ -81,7 +81,7 @@
                     android:textSize="18sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#D5CDCD">
+                    android:textColor="#979494">
                 </TextView>
                 <ImageButton
                     android:id="@+id/ib_next"
@@ -90,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_round_navigate_next_24"
-                    app:tint="#C3C2C2"
+                    app:tint="#A19E9E"
                     />
             </LinearLayout>
         </LinearLayout>
