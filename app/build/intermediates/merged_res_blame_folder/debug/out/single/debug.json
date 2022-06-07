@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\drawable_gradient.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\drawable\\gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\drawable_ic_round_navigate_before_24.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\drawable\\ic_round_navigate_before_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\drawable_icon.jpeg.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\drawable\\icon.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\layout_activity_movie_detail.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\layout\\activity_movie_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\drawable_ic_round_navigate_next_24.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\drawable\\ic_round_navigate_next_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\mipmap-xxxhdpi_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\mipmap-xxxhdpi\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\layout_row_nowplaying_movie.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\layout\\row_nowplaying_movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\layout_row_recommend_movie.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\layout\\row_recommend_movie.xml"
+    },
+    {
+        "merged": "com.example.movieapplication.app-merged_res-25:/layout_activity_main.xml.flat",
+        "source": "com.example.movieapplication.app-main-27:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\layout_row_cast.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\layout\\row_cast.xml"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\drawable-v24_loading_black.jpg.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\drawable-v24\\loading_black.jpg"
+    },
+    {
+        "merged": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-merged_res-25:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\rounak\\.android\\daemon\\7.3.3\\com.example.movieapplication.app-main-27:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    }
+]
